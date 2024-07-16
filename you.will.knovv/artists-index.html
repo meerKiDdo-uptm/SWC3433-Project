@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            body{
+                font-family: Arial, Geneva, sans-serif;
+                margin: 0;
+                padding: 0;
+                padding-top: 100px; /* Add top padding equal to the height of the navbar */
+                margin-left: 20px; /* Adjust left padding as needed */
+                position: relative;
+            }
+
+            .section {
+                height: 100vh; /* Full viewport height */
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                box-sizing: border-box;
+                overflow: hidden;
+            }
+
+            .section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-repeat: no-repeat;
+                filter: blur(8px);
+                z-index: 0;
+            }
+
+            .section1::before {
+                background-image: url('Images/DEAN-bg.jpeg');
+            }
+
+            .section2::before {
+                background-image: url('Images/Tabber-bg.png');
+            }
+
+            .section3::before {
+                background-image: url('Images/Miso2-bg.jpg');
+            }
+
+            .content-box {
+                display: flex;
+                align-items: center;
+                position: relative;
+                z-index: 1;
+                backdrop-filter: blur(8px);
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                width: 80%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .content-box img {
+                max-width: 150px;
+                margin-right: 20px;
+                border-radius: 10px;
+            }
+
+            .content-box .details {
+                max-width: 500px;
+                text-align: justify;
+            }
+
+            .small-pictures {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            .small-pictures .small-picture {
+                width: 125px;
+                height: 125px;
+                border-radius: 10px;
+                cursor: pointer;
+                margin-left: 10px;
+                transition: transform 0.3s ease-in-out;
+            }
+
+            .small-pictures .small-picture:hover {
+                transform: scale(1.1);
+            }
+
+            .topnav{
+                background-color: rgba(255, 255, 255, 0.8);
+                overflow: hidden;
+                position: fixed; /* or absolute */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 10%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 20px;
+                backdrop-filter: blur(8px);
+                z-index: 2;
+            }
+
+            .topnav .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .topnav .logo img {
+                width: 200px;
+                height: auto;
+            }
+
+            .topnav .breadcrumbs{
+                display: flex;
+                align-items: center;
+            }
+
+            .topnav .breadcrumb-link { /*Style the links/text inside the navigation bar*/
+                color: rgb(0, 0, 0);
+                text-align: center;
+                padding: 20px 24px;
+                text-decoration: none;
+                font-size: 13px;
+                position: relative;
+                transition: background-color 0.3s, color 0.3s; /* Add transition for smooth hover effect */
+            }
+
+            .topnav .breadcrumb-link:hover{ /*Change the color of links on hover*/
+                background-color: #9a9a9a;
+                color: rgb(255, 255, 255);
+            }
+
+            .search-bar { /* New style for the search bar */
+                display: flex; /* Allow stacking search elements horizontally */
+                align-items: center; /* Vertically align search box and button */
+                margin-left: 10px;
+            }
+
+            .search-bar input[type="text"] { /* Style the search input box */
+                padding: 6px 10px;
+                margin-right: 5px; /* Add margin for spacing */
+                border: 1px solid #ccc;
+                border-radius: 4px; /* Rounded corners for a cleaner look */
+            }
+
+            .search-bar button { /* Style the search button */
+                padding: 6px 10px;
+                background-color: #ddd; /* Adjust background color as needed */
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                cursor: pointer; /* Indicate clickable button */
+                margin-right: 70px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="topnav">
+            <div class="logo">
+                <a href="youwillknovvindex.html"><img src="Images/labellogo.png"; alt="Logo"></a>
+            </div>
+            <div class="breadcrumbs">
+                <a href="./about-index.html" class="breadcrumb-link">About</a>
+            <a href="./shop-index.php" class="breadcrumb-link">Shop</a>
+            <a href="./news-index.html" class="breadcrumb-link">News</a>
+            <a href="./contacts-index.html" class="breadcrumb-link">Contacts</a>
+            </div>
+            <div class="search-bar"><input type ="text" placeholder="Search">
+                <button>Search</button>
+            </div>
+        </div>
+
+        <div class="section section1">
+            <div class="content-box">
+                <img src="Images/DEAN2.jpg" alt="Picture 1">
+                <div class="details">
+                    <h2>DEAN</h2>
+                    <p>After his debut single [I'm Not Sorry] in 2015, DEAN is an alternative R&B artist that has collaborated with multiple artists such as Daniel Caesar, Anderson Paak., Syd, and Eric Bellinger, allowing him to grow as an internationally acclaimed artist. His influence reaches a wide range of scenes, from music to fashion to art in general. As the leader of alternative collective you.will.knovv, he relentlessly continues to create a new wave of trend.</p>
+                </div>
+                <div class="small-pictures">
+                    <img class="small-picture" src="Images/die4you.jpg" alt="Small Image 1">
+                    <img class="small-picture" src="Images/Breath.jpg" alt="Small Image 2">
+                    <img class="small-picture" src="Images/dayfly.jpg" alt="Small Image 3">
+                </div>
+            </div>
+        </div>
+
+        <div class="section section2">
+            <div class="content-box">
+                <img src="Images/Tabber.jpeg" alt="Picture 2">
+                <div class="details">
+                    <h2>Tabber</h2>
+                    <p>Tabber has proved his potential through collaborating with artists such as ROMderful, Punchnello, and Apro. He released his debut mix tape 'Deep End Mix Tape' in August 2020, making him one of the most exciting acts to watch.</p>
+                </div>
+                <div class="small-pictures">
+                    <img class="small-picture" src="Images/MATTS.jpg" alt="Small Image 4">
+                    <img class="small-picture" src="Images/DeepMix.jpg" alt="Small Image 5">
+                    <img class="small-picture" src="Images/electric.jpg" alt="Small Image 6">
+                </div>
+            </div>
+        </div>
+
+        <div class="section section3">
+            <div class="content-box">
+                <img src="Images/Miso.jpg" alt="Picture 3">
+                <div class="details">
+                    <h2>Miso</h2>
+                    <p>Miso was the first Korean artist ever invited to participate in the renowned all expenses paid Red Bull Music Academy.  She speaks her mind and shares her beliefs through her sincere lyrics and dreamlike melodies.  Miso released her first single [Take Me] in December 2016. She released her second single "Alone" in May 2020.
+
+                        Miso's unique tone and genre bending musical style makes her an artist with fascinating energy and timeless taste.</p>
+                </div>
+                <div class="small-pictures">
+                    <img class="small-picture" src="Images/emotions.jpg" alt="Small Image 7">
+                    <img class="small-picture" src="Images/rawgems.jpg" alt="Small Image 8">
+                    <img class="small-picture" src="Images/takeme.jpg" alt="Small Image 9">
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+        </div>
+    </body>
+</html>
